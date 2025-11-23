@@ -108,6 +108,8 @@ CMD ["python", "src/run.py"]
 ### Branching Strategy
 - `main`: Stable, production-ready code
 - `dev`: Development branch for active development
+- `feature/data-prep`: Branch for data processing development
+- `feature/modeling`: Branch for model development and training
 
 ## 6. Dataset Preparation
 
