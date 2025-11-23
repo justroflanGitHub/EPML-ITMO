@@ -1,0 +1,90 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "iris-data-science-project"
+version = "0.1.0"
+description = "Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern Engineering Practices"
+authors = ["Mikhail <justroflanpochta@mail.ru>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pandas = "2.2.3"
+numpy = "2.2.1"
+scikit-learn = "1.6.0"
+matplotlib = "3.9.3"
+seaborn = "0.13.2"
+jupyter = "1.1.1"
+ipykernel = "6.29.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "25.11.0"
+isort = "7.0.0"
+ruff = "0.14.6"
+mypy = "1.18.2"
+bandit = "1.9.1"
+pre-commit = "4.5.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "T10", "T20", "UP", "B", "C4", "D", "ERA"]
+ignore = ["D203", "D213", "D416", "T201", "C901", "ERA001", "PLR0913"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.bandit]
+exclude_dirs = ["tests", ".git", "__pycache__", ".mypy_cache", ".venv"]
+skips = ["B101", "B601"]
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["log4j.*", "lib.bat.adal.*", "lib.*"]
+ignore_missing_imports = true
