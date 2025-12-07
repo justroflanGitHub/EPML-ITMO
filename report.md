@@ -162,19 +162,6 @@ All tools were installed with specific versions for reproducibility:
 ### MLflow UI Screenshot
 ![MLflow UI](screenshots/mlflow.png)
 
-### Additional Screenshots
-Since this is a text-based report, the following are textual representations:
-
-- **Pre-commit Output:** `pre-commit install` successful
-- **Poetry Install:** `poetry install` completed with 133 packages installed
-- **Git Branches:** `main` and `dev` branches created
-- **Project Structure:** Standard cookiecutter-data-science layout created
-- **Docker Build:** Dockerfile created, ready for building with Docker engine
-
-## 10. Assessment
-
-This setup achieves the required score:
-
 ### Requirements Met:
 1. ✅ Project structure with Cookiecutter
 2. ✅ Pre-commit, Black, isort, Ruff, MyPy, Bandit
