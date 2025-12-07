@@ -159,6 +159,10 @@ All tools were installed with specific versions for reproducibility:
 
 ## 9. Screenshots
 
+### MLflow UI Screenshot
+![MLflow UI](screenshots/mlflow.png)
+
+### Additional Screenshots
 Since this is a text-based report, the following are textual representations:
 
 - **Pre-commit Output:** `pre-commit install` successful

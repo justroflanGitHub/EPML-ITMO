@@ -75,8 +75,10 @@ See `REPRODUCTION.md` for detailed setup and reproduction steps.
 
 ## Screenshots
 
-(Note: Screenshots would be included here in a real report)
+### MLflow UI Screenshot
+![MLflow UI](screenshots/mlflow.png)
 
+### Additional Screenshots
 1. DVC pipeline execution
 2. MLflow UI showing experiment runs
 3. Model registry interface
