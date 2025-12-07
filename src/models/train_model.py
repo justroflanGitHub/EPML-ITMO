@@ -2,14 +2,14 @@ import logging
 from pathlib import Path
 
 import click
+import mlflow
+import mlflow.sklearn
 import pandas as pd
 from dotenv import find_dotenv, load_dotenv
+from mlflow.models import infer_signature
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-import mlflow
-import mlflow.sklearn
-from mlflow.models import infer_signature
 
 
 @click.command()
@@ -24,11 +24,13 @@ def main(input_filepath, output_filepath):
 
     # Load data
     df = pd.read_csv(input_filepath)
-    X = df.drop(['target', 'target_name'], axis=1)
-    y = df['target']
+    X = df.drop(["target", "target_name"], axis=1)
+    y = df["target"]
 
     # Split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
 
     # Train
     model = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -59,6 +61,7 @@ def main(input_filepath, output_filepath):
 
     # Save model locally
     import joblib
+
     joblib.dump(model, output_filepath)
     logger.info(f"Model saved to {output_filepath}")
 

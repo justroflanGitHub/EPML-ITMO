@@ -2,4 +2,4 @@
     remote = myremote
     autostage = true
 ['remote "myremote"']
-    url = ../data/remote
+    url = data/remote

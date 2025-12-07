@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/MIKHAIL/Desktop/EPML-ITMO/iris-data-science-project/src/models/mlruns/1/models/m-93d9354407fa40b3a269d9197d955198/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.7.0
+model_id: m-93d9354407fa40b3a269d9197d955198
+model_size_bytes: 158157
+model_uuid: m-93d9354407fa40b3a269d9197d955198
+prompts: null
+run_id: e73cbfea178e42c6a5eabb9c23127d29
+utc_time_created: '2025-12-14 20:03:55.072061'

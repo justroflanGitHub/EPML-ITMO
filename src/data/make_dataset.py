@@ -10,16 +10,15 @@ from sklearn.datasets import load_iris
 @click.command()
 @click.argument("output_filepath", type=click.Path())
 def main(output_filepath):
-    """Runs data processing scripts to download iris data and save to raw.
-    """
+    """Runs data processing scripts to download iris data and save to raw."""
     logger = logging.getLogger(__name__)
     logger.info("downloading iris data")
 
     # Load iris dataset
     iris = load_iris()
     df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
-    df['target'] = iris.target
-    df['target_name'] = df['target'].apply(lambda x: iris.target_names[x])
+    df["target"] = iris.target
+    df["target_name"] = df["target"].apply(lambda x: iris.target_names[x])
 
     # Ensure output directory exists
     output_path = Path(output_filepath)
