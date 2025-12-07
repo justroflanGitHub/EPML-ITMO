@@ -1,0 +1,11 @@
+stages:
+  download:
+    cmd: python src/data/make_dataset.py data/raw/iris.csv
+    outs:
+      - data/raw/iris.csv
+  train:
+    cmd: python src/models/train_model.py data/raw/iris.csv models/model.joblib
+    deps:
+      - data/raw/iris.csv
+    outs:
+      - models/model.joblib

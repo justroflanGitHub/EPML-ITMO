@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/MIKHAIL/Desktop/EPML-ITMO/iris-data-science-project/models/mlruns/414104231308403801/d068c6134cbe4f63ba3aadcb2a220701/artifacts
+end_time: 1765130222365
+entry_point_name: ''
+experiment_id: '414104231308403801'
+lifecycle_stage: active
+run_id: d068c6134cbe4f63ba3aadcb2a220701
+run_name: languid-worm-515
+run_uuid: d068c6134cbe4f63ba3aadcb2a220701
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765130215645
+status: 3
+tags: []
+user_id: MIKHAIL

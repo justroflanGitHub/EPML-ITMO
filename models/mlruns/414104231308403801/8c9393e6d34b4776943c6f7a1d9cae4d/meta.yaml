@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/MIKHAIL/Desktop/EPML-ITMO/iris-data-science-project/models/mlruns/414104231308403801/8c9393e6d34b4776943c6f7a1d9cae4d/artifacts
+end_time: 1765130272716
+entry_point_name: ''
+experiment_id: '414104231308403801'
+lifecycle_stage: active
+run_id: 8c9393e6d34b4776943c6f7a1d9cae4d
+run_name: able-finch-147
+run_uuid: 8c9393e6d34b4776943c6f7a1d9cae4d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765130269089
+status: 3
+tags: []
+user_id: MIKHAIL
