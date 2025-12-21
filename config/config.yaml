@@ -1,0 +1,44 @@
+# Main Snakemake configuration
+datasets:
+  - iris
+
+algorithms:
+  - random_forest
+  - svm
+  - logistic_regression
+  - gradient_boosting
+
+# Data configuration
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  test_size: 0.2
+  random_state: 42
+
+# Model configuration
+models:
+  output_dir: "models"
+  metrics_dir: "reports"
+
+# Pipeline settings
+pipeline:
+  parallel_jobs: 4
+  use_cache: true
+  enable_monitoring: true
+  enable_notifications: true
+
+# Hydra configuration path
+hydra_config_path: "config/hydra"
+
+# Monitoring settings
+monitoring:
+  enabled: true
+  log_level: "INFO"
+  slack_webhook: null  # Set in environment variables
+  email_notifications: false
+
+# Notification settings
+notifications:
+  on_success: true
+  on_failure: true
+  email_recipients: []

@@ -1,0 +1,14 @@
+{
+  "algorithm": "logistic_regression",
+  "dataset": "iris",
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "lbfgs"
+  },
+  "n_features": 4,
+  "n_samples": 120,
+  "model_type": "LogisticRegression"
+}

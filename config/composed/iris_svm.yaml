@@ -1,0 +1,48 @@
+data:
+  features:
+  - sepal length (cm)
+  - sepal width (cm)
+  - petal length (cm)
+  - petal width (cm)
+  name: iris
+  random_state: 42
+  source: sklearn
+  target: target
+  target_names:
+  - setosa
+  - versicolor
+  - virginica
+  test_size: 0.2
+  validation_size: 0.2
+evaluation:
+  cross_validation: true
+  cv_folds: 5
+  metrics:
+  - accuracy
+  - precision_macro
+  - recall_macro
+  - f1_macro
+  plot_precision_recall_curve: false
+  plot_roc_curve: false
+  save_classification_report: true
+  save_confusion_matrix: true
+experiment_name: ml_pipeline_experiment
+log_level: INFO
+model:
+  algorithm: svm
+  hyperparameters:
+    C: 1.0
+    gamma: scale
+    kernel: rbf
+    random_state: 42
+output_dir: outputs/ml_pipeline_experiment
+seed: 42
+training:
+  batch_size: 32
+  early_stopping: true
+  epochs: 100
+  learning_rate: 0.001
+  loss_function: cross_entropy
+  optimizer: adam
+  patience: 10
+  validation_metric: accuracy

@@ -1,0 +1,9 @@
+{
+  "status": "valid",
+  "config_files_checked": 3,
+  "files_valid": [
+    "config/hydra/config.yaml",
+    "config/hydra/model/random_forest.yaml",
+    "config/hydra/data/iris.yaml"
+  ]
+}

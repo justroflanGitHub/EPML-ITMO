@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T23:45:32.803427",
+  "overall_status": "healthy",
+  "checks": {
+    "data_iris": "present",
+    "model_iris_random_forest": "present",
+    "metrics_iris_random_forest": "present",
+    "model_iris_svm": "present",
+    "metrics_iris_svm": "present",
+    "model_iris_logistic_regression": "present",
+    "metrics_iris_logistic_regression": "present",
+    "model_iris_gradient_boosting": "present",
+    "metrics_iris_gradient_boosting": "present"
+  },
+  "issues": []
+}

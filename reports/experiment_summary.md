@@ -40,23 +40,31 @@
 
 ## Experiment: iris_ml_experiments
 
-Total runs: 36
+Total runs: 54
 
 ## Best Models by Type
 
 | Model Type | Accuracy | F1 Score | Run ID |
 |------------|----------|----------|--------|
-| AdaBoostClassifier | 0.9333333333333333 | 0.9333333333333333 | 20da18bd495a4c0dae5660f1f4631b81 |
-| DecisionTreeClassifier | 0.9666666666666667 | 0.9665831244778613 | 9532a3473e5547f5a73bbddcc3718cfe |
-| GaussianNB | 0.9666666666666667 | 0.9665831244778613 | 7abfc756fecc41dcad82d8958d8cb78b |
-| GradientBoostingClassifier | 0.9666666666666667 | 0.9665831244778613 | 29ff45db1031465a9e70ddd3f1d034f5 |
-| KNeighborsClassifier | 0.9333333333333333 | 0.9326599326599326 | 992fd5a6daa44ec79bceea6c2983e37d |
-| LogisticRegression | 1.0 | 1.0 | 9b3092a5d9a847f18e3256387d6d724e |
-| MLPClassifier | 0.9666666666666667 | 0.9665831244778613 | d24bff48eb244c27a7744a6ed3391c5b |
-| RandomForestClassifier | 0.9666666666666667 | 0.9665831244778613 | e0fcdccececf493fad456c81a0253c84 |
-| SVC | 1.0 | 1.0 | 9f25374990a348378d7cadfc74724750 |
+| AdaBoostClassifier | 0.9333333333333333 | 0.9333333333333333 | e917daa2a8924737ab5b7ba9b04de706 |
+| DecisionTreeClassifier | 0.9666666666666667 | 0.9665831244778613 | a09eb7c0c8fa4fdb9129f378cec0eb9c |
+| GaussianNB | 0.9666666666666667 | 0.9665831244778613 | 1c8b7240a9fa4b339fab27dcdb135211 |
+| GradientBoostingClassifier | 0.9666666666666667 | 0.9665831244778613 | 6123026e4582451f86f8a54f5cb85f66 |
+| KNeighborsClassifier | 0.9333333333333333 | 0.9326599326599326 | 519f6b0e00644f69876eacb5fb54ba98 |
+| LogisticRegression | 1.0 | 1.0 | 6f01a996d0554294b9aa15ddc30d73be |
+| MLPClassifier | 0.9666666666666667 | 0.9665831244778613 | 987d25dbcea34c429c63df0e316e9265 |
+| RandomForestClassifier | 0.9666666666666667 | 0.9665831244778613 | 8d3c1ea2aac04903a384462b782d9f9b |
+| SVC | 1.0 | 1.0 | 3f1859c4eb604305a15cc74ed5787ccc |
 
 ## Detailed Run Information
+
+### Run 6f01a996d0554294b9aa15ddc30d73be (LogisticRegression)
+- Accuracy: 1.0
+- Parameters: {}
+
+### Run 3f1859c4eb604305a15cc74ed5787ccc (SVC)
+- Accuracy: 1.0
+- Parameters: {}
 
 ### Run 9b3092a5d9a847f18e3256387d6d724e (LogisticRegression)
 - Accuracy: 1.0
@@ -72,6 +80,34 @@ Total runs: 36
 
 ### Run d4bd3af6037448b591aa46d7fca0c85f (SVC)
 - Accuracy: 1.0
+- Parameters: {}
+
+### Run 6123026e4582451f86f8a54f5cb85f66 (GradientBoostingClassifier)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run 987d25dbcea34c429c63df0e316e9265 (MLPClassifier)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run 1c8b7240a9fa4b339fab27dcdb135211 (GaussianNB)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run 3685b6f48b044911bdbd29e5b3f62f80 (GradientBoostingClassifier)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run a09eb7c0c8fa4fdb9129f378cec0eb9c (DecisionTreeClassifier)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run 5c916ee9b2b44aa381218171fe544131 (SVC)
+- Accuracy: 0.9666666666666667
+- Parameters: {}
+
+### Run 8d3c1ea2aac04903a384462b782d9f9b (RandomForestClassifier)
+- Accuracy: 0.9666666666666667
 - Parameters: {}
 
 ### Run 29ff45db1031465a9e70ddd3f1d034f5 (GradientBoostingClassifier)
@@ -130,6 +166,30 @@ Total runs: 36
 - Accuracy: 0.9666666666666667
 - Parameters: {}
 
+### Run e917daa2a8924737ab5b7ba9b04de706 (AdaBoostClassifier)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run 519f6b0e00644f69876eacb5fb54ba98 (KNeighborsClassifier)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run f789e240dc424adf886066312483beb4 (LogisticRegression)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run 905a4328883a460aa88d3815ade5776b (LogisticRegression)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run cc4ee8bb177b471d83f441a976bace6b (DecisionTreeClassifier)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run 6da3ae40427a43f484133f3d001e50ba (SVC)
+- Accuracy: 0.9333333333333333
+- Parameters: {}
+
 ### Run 20da18bd495a4c0dae5660f1f4631b81 (AdaBoostClassifier)
 - Accuracy: 0.9333333333333333
 - Parameters: {}
@@ -176,6 +236,18 @@ Total runs: 36
 
 ### Run dcfe41fe0cc2463f96fb197183e4da65 (SVC)
 - Accuracy: 0.9333333333333333
+- Parameters: {}
+
+### Run 6491c608663a4936b67811ff29346150 (RandomForestClassifier)
+- Accuracy: 0.9
+- Parameters: {}
+
+### Run c92684331034466982314ba312e214d4 (RandomForestClassifier)
+- Accuracy: 0.9
+- Parameters: {}
+
+### Run 0eee23323077466bb9a775f73c350f53 (RandomForestClassifier)
+- Accuracy: 0.9
 - Parameters: {}
 
 ### Run ae79ad6aef8348bd8b020662c81220e3 (RandomForestClassifier)

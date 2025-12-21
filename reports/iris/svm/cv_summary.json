@@ -1,0 +1,11 @@
+{
+  "best_metric": "accuracy",
+  "best_score": 0.975,
+  "cv_std": 0.02041241452319313,
+  "all_metrics": [
+    "accuracy",
+    "precision_macro",
+    "recall_macro",
+    "f1_macro"
+  ]
+}

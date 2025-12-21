@@ -1,0 +1,9 @@
+# Default training configuration
+epochs: 100
+batch_size: 32
+learning_rate: 0.001
+early_stopping: true
+patience: 10
+validation_metric: accuracy
+optimizer: adam
+loss_function: cross_entropy

@@ -1,0 +1,7 @@
+# SVM model configuration
+algorithm: svm
+hyperparameters:
+  C: 1.0
+  kernel: rbf
+  gamma: scale
+  random_state: 42

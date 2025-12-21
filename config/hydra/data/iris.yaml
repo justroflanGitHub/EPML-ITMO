@@ -1,0 +1,13 @@
+# Iris dataset configuration
+name: iris
+source: sklearn
+test_size: 0.2
+validation_size: 0.2
+random_state: ${seed}
+features:
+  - sepal length (cm)
+  - sepal width (cm)
+  - petal length (cm)
+  - petal width (cm)
+target: target
+target_names: ["setosa", "versicolor", "virginica"]

@@ -1,0 +1,50 @@
+# Main Hydra configuration for ML pipeline
+defaults:
+  - data: iris
+  - model: random_forest
+  - training: default
+  - evaluation: classification
+  - _self_
+
+# Global settings
+seed: 42
+experiment_name: "ml_pipeline_experiment"
+output_dir: "outputs/${experiment_name}"
+log_level: INFO
+
+# Data settings
+data:
+  name: iris
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: ${seed}
+
+# Training settings
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  early_stopping: true
+  patience: 10
+
+# Evaluation settings
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1"]
+  cross_validation: true
+  cv_folds: 5
+
+# Model settings
+model:
+  algorithm: random_forest
+  hyperparameters:
+    n_estimators: 100
+    max_depth: null
+    random_state: ${seed}
+
+# Hydra settings
+hydra:
+  run:
+    dir: ${output_dir}/runs/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ${output_dir}/sweeps/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra:job.num}

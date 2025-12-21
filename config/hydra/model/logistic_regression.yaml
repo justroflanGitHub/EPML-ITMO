@@ -1,0 +1,8 @@
+# Logistic Regression model configuration
+algorithm: logistic_regression
+hyperparameters:
+  C: 1.0
+  penalty: l2
+  solver: lbfgs
+  max_iter: 1000
+  random_state: 42

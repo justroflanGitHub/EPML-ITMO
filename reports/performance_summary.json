@@ -1,0 +1,114 @@
+{
+  "generated_at": "2025-12-21T23:45:33.699547",
+  "total_models": 4,
+  "best_accuracy_model": {
+    "algorithm": "svm",
+    "dataset": "iris",
+    "accuracy": 0.9666666666666667
+  },
+  "best_f1_model": {
+    "algorithm": "svm",
+    "dataset": "iris",
+    "f1_score": 0.9665831244778612
+  },
+  "all_results": [
+    {
+      "accuracy": 0.9,
+      "precision_macro": 0.9023569023569024,
+      "precision_micro": 0.9,
+      "recall_macro": 0.9,
+      "recall_micro": 0.9,
+      "f1_macro": 0.899749373433584,
+      "f1_micro": 0.9,
+      "dataset": "iris",
+      "algorithm": "random_forest"
+    },
+    {
+      "accuracy": 0.9666666666666667,
+      "precision_macro": 0.9696969696969697,
+      "precision_micro": 0.9666666666666667,
+      "recall_macro": 0.9666666666666667,
+      "recall_micro": 0.9666666666666667,
+      "f1_macro": 0.9665831244778612,
+      "f1_micro": 0.9666666666666667,
+      "dataset": "iris",
+      "algorithm": "svm"
+    },
+    {
+      "accuracy": 0.9666666666666667,
+      "precision_macro": 0.9696969696969697,
+      "precision_micro": 0.9666666666666667,
+      "recall_macro": 0.9666666666666667,
+      "recall_micro": 0.9666666666666667,
+      "f1_macro": 0.9665831244778612,
+      "f1_micro": 0.9666666666666667,
+      "dataset": "iris",
+      "algorithm": "logistic_regression"
+    },
+    {
+      "accuracy": 0.9666666666666667,
+      "precision_macro": 0.9696969696969697,
+      "precision_micro": 0.9666666666666667,
+      "recall_macro": 0.9666666666666667,
+      "recall_micro": 0.9666666666666667,
+      "f1_macro": 0.9665831244778612,
+      "f1_micro": 0.9666666666666667,
+      "dataset": "iris",
+      "algorithm": "gradient_boosting"
+    }
+  ],
+  "cv_summaries": [
+    {
+      "best_metric": "accuracy",
+      "best_score": 0.95,
+      "cv_std": 0.016666666666666698,
+      "all_metrics": [
+        "accuracy",
+        "precision_macro",
+        "recall_macro",
+        "f1_macro"
+      ],
+      "dataset": "iris",
+      "algorithm": "random_forest"
+    },
+    {
+      "best_metric": "accuracy",
+      "best_score": 0.975,
+      "cv_std": 0.02041241452319313,
+      "all_metrics": [
+        "accuracy",
+        "precision_macro",
+        "recall_macro",
+        "f1_macro"
+      ],
+      "dataset": "iris",
+      "algorithm": "svm"
+    },
+    {
+      "best_metric": "accuracy",
+      "best_score": 0.9666666666666668,
+      "cv_std": 0.016666666666666653,
+      "all_metrics": [
+        "accuracy",
+        "precision_macro",
+        "recall_macro",
+        "f1_macro"
+      ],
+      "dataset": "iris",
+      "algorithm": "logistic_regression"
+    },
+    {
+      "best_metric": "accuracy",
+      "best_score": 0.9666666666666668,
+      "cv_std": 0.016666666666666653,
+      "all_metrics": [
+        "accuracy",
+        "precision_macro",
+        "recall_macro",
+        "f1_macro"
+      ],
+      "dataset": "iris",
+      "algorithm": "gradient_boosting"
+    }
+  ]
+}
