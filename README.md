@@ -83,7 +83,7 @@ python -m snakemake generate_pipeline_report       # Generate reports
 python -m snakemake clean
 
 # View pipeline DAG visualization
-python -m snakemake dag > pipeline_dag.png
+python -m snakemake dag
 ```
 
 ### Configuration Management
