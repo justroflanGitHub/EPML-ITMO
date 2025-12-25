@@ -17,10 +17,9 @@
 import os
 import sys
 
-# Add current directory and parent directory to path for documentation
+# Add current directory to path for documentation
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
-sys.path.insert(0, os.path.dirname(current_dir))
 
 # -- General configuration -----------------------------------------------------
 
@@ -29,63 +28,17 @@ needs_sphinx = "4.0"
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+# MINIMAL EXTENSIONS - no autodoc or autosummary to avoid import errors
 extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.napoleon",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-    "sphinx.ext.coverage",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.ifconfig",
     "sphinx.ext.githubpages",
     "myst_parser",
-    "sphinx_autodoc_typehints",
     "sphinx_copybutton",
 ]
 
-# Autodoc settings - disable autosummary to avoid import errors
-autodoc_default_options = {
-    "members": True,
-    "undoc-members": True,
-    "show-inheritance": True,
-    "member-order": "bysource",
-}
-
-# Napoleon settings
-napoleon_google_docstring = True
-napoleon_numpy_docstring = True
-napoleon_include_init_with_doc = False
-napoleon_include_private_with_doc = False
-
-# Intersphinx mapping
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-    "pandas": ("https://pandas.pydata.org/docs/", None),
-    "sklearn": ("https://scikit-learn.org/stable/", None),
-    "matplotlib": ("https://matplotlib.org/stable/", None),
-    "seaborn": ("https://seaborn.pydata.org/", None),
-}
-
-# MyST Parser settings
-myst_enable_extensions = [
-    "colon_fence",
-    "deflist",
-    "dollarmath",
-    "fieldlist",
-    "html_admonition",
-    "html_image",
-    "linkify",
-    "replacements",
-    "smartquotes",
-    "strikethrough",
-    "substitution",
-    "tasklist",
-]
-
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+templates_path = []
 
 # The suffix of source filenames.
 source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
@@ -176,7 +129,7 @@ html_theme = "sphinx_rtd_theme"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin default.css.
-html_static_path = []  # Remove _static to avoid warnings
+html_static_path = []  # No static files to avoid warnings
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -273,7 +226,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, "iris-data-science-project", "Iris Data Science Project Documentation",
-     [author], 1)
+     ["Mikhail"], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -287,7 +240,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, "iris-data-science-project", "Iris Data Science Project Documentation",
-     author, "iris-data-science-project", "Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern Engineering Practices",
+     "Mikhail", "iris-data-science-project", "Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern Engineering Practices",
      "Miscellaneous"),
 ]
 
