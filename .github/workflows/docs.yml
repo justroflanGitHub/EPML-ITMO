@@ -44,40 +44,17 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-          installer-parallel: true
-
-      - name: Synchronize Poetry lock file
+      - name: Install dependencies using pip
         run: |
-          echo "Current directory: $(pwd)"
-          echo "Checking pyproject.toml and poetry.lock..."
-          ls -la pyproject.toml poetry.lock
-          echo "Regenerating poetry.lock to match pyproject.toml..."
-          poetry lock --no-update
-          echo "Lock file synchronized at $(date)"
-
-      - name: Force regenerate and install dependencies
-        run: |
-          echo "Starting fresh dependency installation..."
-          echo "Removing any existing venv to start clean..."
-          rm -rf .venv
-          echo "Regenerating poetry.lock from scratch..."
-          poetry lock --no-update
-          echo "Installing all dependencies including project..."
-          poetry install --no-interaction
-          echo "Dependencies installation completed at $(date)"
-          echo "Verifying installation..."
-          poetry show
+          echo "Installing Python dependencies..."
+          python -m pip install --upgrade pip
+          python -m pip install sphinx sphinx-rtd-theme myst-parser sphinx-autodoc-typehints sphinx-copybutton
 
       - name: Build documentation
         run: |
           echo "Building Sphinx documentation..."
           cd docs
-          poetry run sphinx-build -b html . _build/html
+          python -m sphinx -b html . _build/html
           echo "Documentation built successfully"
 
       - name: Upload artifact
