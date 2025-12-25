@@ -1,0 +1,10 @@
+{
+  "total_experiments": 0,
+  "best_accuracy": 0,
+  "avg_accuracy": 0,
+  "std_accuracy": 0,
+  "generation_time": "2025-12-26T00:59:09.780387",
+  "charts_generated": [
+    "feature_importance.png"
+  ]
+}
