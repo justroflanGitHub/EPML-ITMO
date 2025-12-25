@@ -21,6 +21,10 @@ import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
 
+# Add parent directory (project root) to path for src modules
+project_root = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.insert(0, project_root)
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -36,6 +40,9 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
 ]
+
+# Disable autosummary generation to avoid import errors
+autosummary_generate = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = []
@@ -128,7 +135,7 @@ html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin default.css.
+# so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = []  # No static files to avoid warnings
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
@@ -142,7 +149,7 @@ html_static_path = []  # No static files to avoid warnings
 # Custom sidebar templates, maps document names to template names.
 # html_sidebars = {}
 
-# Additional templates that should be rendered to pages, maps page names to
+# Additional templates that should be rendered to pages, maps document names to
 # template names.
 # html_additional_pages = {}
 
