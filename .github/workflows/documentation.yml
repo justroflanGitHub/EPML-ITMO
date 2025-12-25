@@ -41,6 +41,14 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install documentation dependencies
         run: |
           echo "Installing documentation dependencies..."
@@ -56,6 +64,7 @@ jobs:
           rm -rf _build
           rm -rf .doctrees
           rm -rf .buildinfo
+          rm -rf .env
           echo "Cache cleaned"
 
       - name: Build documentation with fresh environment
