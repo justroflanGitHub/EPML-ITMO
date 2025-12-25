@@ -1,16 +1,6 @@
-"""Minimal Sphinx configuration to prevent autosummary import errors."""
+"""Sphinx configuration with proper sys_path setup for autosummary imports."""
 
 import os
-import sys
-
-# Add paths for documentation build
-current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(current_dir, ".."))
-src_dir = os.path.join(project_root, "src")
-
-sys.path.insert(0, current_dir)
-sys.path.insert(0, project_root)
-sys.path.insert(0, src_dir)  # Add src directory to Python path
 
 # Sphinx configuration with autosummary support
 project = "Iris Data Science Project"
@@ -22,7 +12,14 @@ source_suffix = {".rst": "restructuredtext", ".md": "markdown"}
 html_theme = "sphinx_rtd_theme"
 exclude_patterns = ["_build"]
 templates_path: list[str] = []
-html_static_path: list[str] = ["_static"]  # Add static files directory
+html_static_path: list[str] = ["_static"]
+
+# Use sys_path_append instead of manual sys.path modification
+# This adds the project root and src directory to Python path
+sys_path_append = [
+    os.path.abspath(".."),  # Project root
+    os.path.abspath("../src"),  # src directory
+]
 
 # Enable autosummary functionality
 autosummary_generate = True
