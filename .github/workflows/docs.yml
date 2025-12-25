@@ -51,25 +51,20 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
-      - name: Regenerate lock file
+      - name: Synchronize Poetry lock file
         run: |
-          poetry lock
-          echo "Lock file regenerated at $(date)"
+          echo "Current directory: $(pwd)"
+          echo "Checking pyproject.toml and poetry.lock..."
+          ls -la pyproject.toml poetry.lock
+          echo "Regenerating poetry.lock to match pyproject.toml..."
+          poetry lock --no-update
+          echo "Lock file synchronized at $(date)"
 
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
+      - name: Install all dependencies
         run: |
-          poetry install --no-interaction --no-root
-          echo "Dependencies installed successfully"
-
-      - name: Install project
-        run: poetry install --no-interaction
+          echo "Installing all dependencies and project..."
+          poetry install --no-interaction
+          echo "All dependencies installed successfully at $(date)"
 
       - name: Build documentation
         run: |
