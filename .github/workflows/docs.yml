@@ -44,9 +44,9 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install dependencies using pip
+      - name: Install documentation dependencies
         run: |
-          echo "Installing Python dependencies..."
+          echo "Installing documentation dependencies..."
           python -m pip install --upgrade pip
           python -m pip install sphinx sphinx-rtd-theme myst-parser sphinx-autodoc-typehints sphinx-copybutton
 
