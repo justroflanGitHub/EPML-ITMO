@@ -321,6 +321,21 @@ Experiment: iris_random_forest_20251225_220000
 - Model Size: 45.2 KB
 ```
 
+#### Demo Mode Training Results
+The system includes demo mode functionality for environments without ClearML credentials:
+
+```
+Demo Mode Training Results:
+- Experiment: iris_random_forest_20251225_221115
+- Model Type: Random Forest
+- Dataset: data/processed/iris/train.csv
+- Train/Test Split: 96/24 samples
+- Accuracy: 0.9583
+- Model Saved: models/test_model.pkl
+- ClearML Integration: Disabled (demo mode)
+- Status: Training completed successfully
+```
+
 ### Pipeline Execution Results
 
 #### Pipeline Visualization
