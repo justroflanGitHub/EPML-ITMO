@@ -67,12 +67,11 @@ jobs:
           rm -rf .env
           echo "Cache cleaned"
 
-      - name: Build documentation with minimal configuration
+      - name: Build documentation
         run: |
-          echo "Building Sphinx documentation with minimal configuration..."
+          echo "Building Sphinx documentation..."
           cd docs
-          # Use minimal configuration and override extensions via environment
-          SPHINX_EXTENSIONS=myst_parser python -m sphinx -b html --fresh-env . _build/html
+          python -m sphinx -b html . _build/html
           echo "Documentation built successfully"
         continue-on-error: true  # Allow build to continue even with warnings
 
