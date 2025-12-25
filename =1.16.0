@@ -1,0 +1,37 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting clearml
+  Downloading clearml-2.1.0-py2.py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: attrs>=18.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (23.2.0)
+Collecting furl>=2.0.0 (from clearml)
+  Downloading furl-2.1.4-py2.py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: jsonschema>=2.6.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (4.25.1)
+Requirement already satisfied: numpy>=1.10 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (2.2.6)
+Collecting pathlib2>=2.3.0 (from clearml)
+  Downloading pathlib2-2.3.7.post1-py2.py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: psutil>=3.4.2 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (7.1.2)
+Requirement already satisfied: pyparsing>=2.0.3 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (3.2.4)
+Requirement already satisfied: python-dateutil>=2.6.1 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (2.9.0.post0)
+Collecting pyjwt<2.11.0,>=2.4.0 (from clearml)
+  Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: PyYAML>=3.12 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (6.0.3)
+Requirement already satisfied: six>=1.16.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (1.17.0)
+Requirement already satisfied: urllib3>=1.21.1 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (2.5.0)
+Requirement already satisfied: Pillow>=10.3.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (11.3.0)
+Requirement already satisfied: referencing<0.40 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (0.37.0)
+Requirement already satisfied: requests>=2.32.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from clearml) (2.32.5)
+Requirement already satisfied: rpds-py>=0.7.0 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from referencing<0.40->clearml) (0.28.0)
+Collecting orderedmultidict>=1.0.1 (from furl>=2.0.0->clearml)
+  Downloading orderedmultidict-1.0.2-py2.py3-none-any.whl.metadata (1.2 kB)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from jsonschema>=2.6.0->clearml) (2025.9.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from requests>=2.32.0->clearml) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from requests>=2.32.0->clearml) (3.10)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\mikhail\appdata\local\packages\pythonsoftwarefoundation.python.3.13_qbz5n2kfra8p0\localcache\local-packages\python313\site-packages (from requests>=2.32.0->clearml) (2025.8.3)
+Downloading clearml-2.1.0-py2.py3-none-any.whl (1.4 MB)
+   ---------------------------------------- 1.4/1.4 MB 5.0 MB/s  0:00:00
+Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Downloading furl-2.1.4-py2.py3-none-any.whl (27 kB)
+Downloading orderedmultidict-1.0.2-py2.py3-none-any.whl (11 kB)
+Downloading pathlib2-2.3.7.post1-py2.py3-none-any.whl (18 kB)
+Installing collected packages: pyjwt, pathlib2, orderedmultidict, furl, clearml
+
+Successfully installed clearml-2.1.0 furl-2.1.4 orderedmultidict-1.0.2 pathlib2-2.3.7.post1 pyjwt-2.10.1

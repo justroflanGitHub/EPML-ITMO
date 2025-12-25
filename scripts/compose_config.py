@@ -58,7 +58,7 @@ def main():
             # Merge dataset config, but override with resolved values
             for key, value in dataset_config.items():
                 if key == "random_state" and isinstance(value, str) and "${" in value:
-                    config["data"][key] = 42  # Resolve ${seed} to 42
+                    config["data"][key] = 42
                 else:
                     config["data"][key] = value
 

@@ -1,0 +1,49 @@
+# ClearML Configuration
+api:
+  # ClearML Hosted Service (free tier)
+  web_server: https://app.clear.ml
+  api_server: https://api.clear.ml
+  files_server: https://files.clear.ml
+
+  # Credentials (will be set via environment variables)
+  # access_key: YOUR_ACCESS_KEY
+  # secret_key: YOUR_SECRET_KEY
+
+# Project configuration
+project:
+  name: "Iris Data Science Project"
+  description: "MLOps workflow for Iris classification using ClearML"
+
+# Experiment tracking
+experiment:
+  name_template: "iris_{model_name}_{timestamp}"
+  tags: ["iris", "classification", "mlops"]
+
+# Model management
+model:
+  project: "Iris Models"
+  tags: ["production", "staging", "development"]
+
+# Pipeline configuration
+pipeline:
+  project: "Iris Pipelines"
+  queue: "default"
+
+# Storage
+storage:
+  output_uri: "./clearml_artifacts"
+
+# Logging
+logging:
+  level: "INFO"
+  enable_automatic_logging: true
+  log_model: true
+  log_code: true
+  log_requirements: true
+
+# Notifications
+notifications:
+  enabled: true
+  on_experiment_completed: true
+  on_pipeline_completed: true
+  webhook_url: null

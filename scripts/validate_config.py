@@ -9,7 +9,6 @@ import yaml
 
 def main():
     try:
-        # Simple validation by loading config files
         config_files = [
             "config/hydra/config.yaml",
             "config/hydra/model/random_forest.yaml",
