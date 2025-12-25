@@ -45,9 +45,16 @@ jobs:
         run: |
           echo "Installing documentation dependencies..."
           python -m pip install --upgrade pip
-          python -m pip install sphinx sphinx-rtd-theme myst-parser sphinx-autodoc-typehints sphinx-copybutton
+          python -m pip install sphinx myst-parser
           # Install the project in development mode to make src modules available
           python -m pip install -e .
+
+      - name: Clean Sphinx cache
+        run: |
+          echo "Cleaning Sphinx cache..."
+          cd docs
+          rm -rf _build
+          rm -rf .doctrees
 
       - name: Build documentation
         run: |
