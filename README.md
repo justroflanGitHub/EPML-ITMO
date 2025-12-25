@@ -5,7 +5,16 @@ Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern
 
 ## Features
 
-### HW4: Automated ML Pipelines (Latest)
+### HW5: ClearML MLOps Integration (Latest)
+- **Experiment Tracking**: ClearML for comprehensive experiment logging, parameter tracking, and artifact management
+- **Model Management**: Automatic model versioning, registration, and deployment with metadata tracking
+- **Pipeline Orchestration**: ClearML pipelines for end-to-end ML workflow automation with dependency management
+- **Real-time Monitoring**: Pipeline status monitoring, automated alerts, and performance tracking
+- **Experiment Comparison**: Cross-experiment analysis with performance visualization and recommendations
+- **Multi-framework Support**: Native support for scikit-learn models with extensible architecture
+- **Production Ready**: Enterprise-grade MLOps solution with audit trails and compliance features
+
+### HW4: Automated ML Pipelines
 - **Workflow Orchestration**: Snakemake for scalable, reproducible ML pipelines with DAG-based execution
 - **Configuration Management**: Hydra for hierarchical configuration with validation and composition
 - **Parallel Processing**: Multi-core execution with intelligent caching and dependency resolution
@@ -26,8 +35,45 @@ Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern
 - Python 3.13+
 - pip (for dependency management)
 - Git
+- ClearML account (optional, for hosted service)
 
-### HW4: Automated Pipeline (Recommended)
+### HW5: ClearML MLOps Integration (Most Advanced)
+
+1. Clone the repository and checkout HW5 branch:
+```bash
+git clone https://github.com/justroflanGitHub/EPML-ITMO.git
+cd EPML-ITMO
+git checkout hw_5
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Setup ClearML (optional, for full functionality):
+```bash
+# Set environment variables
+export CLEARML_API_ACCESS_KEY='your_access_key'
+export CLEARML_API_SECRET_KEY='your_secret_key'
+
+# Initialize ClearML
+python scripts/setup_clearml.py
+```
+
+4. Run ClearML experiment:
+```bash
+# Train model with ClearML tracking
+python src/models/train_model_clearml.py data/processed/iris_processed.csv models/clearml_model.pkl --model-type random_forest
+
+# Run ClearML pipeline
+python src/models/clearml_pipeline.py --dataset data/processed/iris_processed.csv --models random_forest svm
+
+# Compare experiments
+python src/models/compare_experiments.py --project "Iris Data Science Project"
+```
+
+### HW4: Automated Pipeline
 
 1. Clone the repository and checkout HW4 branch:
 ```bash
@@ -136,6 +182,12 @@ HW4 Pipeline Performance (Latest Run):
 
 ## Documentation
 
+### HW5 Documentation
+- [ClearML MLOps Implementation Report](reports/ClearML_MLOps_Report.md) - Complete ClearML integration documentation
+- [Experiment Tracking Guide](reports/ClearML_MLOps_Report.md#experiment-tracking) - ClearML experiment management
+- [Pipeline Orchestration](reports/ClearML_MLOps_Report.md#pipeline-orchestration) - Automated ML workflows
+- [Monitoring & Alerts](reports/ClearML_MLOps_Report.md#monitoring-and-notifications) - Real-time pipeline monitoring
+
 ### HW4 Documentation
 - [HW4 Implementation Report](HW4_REPORT.md) - Complete automated pipeline documentation
 - [Pipeline Architecture Details](HW4_REPORT.md#pipeline-architecture) - Technical implementation details
@@ -146,6 +198,11 @@ HW4 Pipeline Performance (Latest Run):
 - [Reproduction Instructions](REPRODUCTION.md) - Step-by-step guide for setup and usage
 
 ## Tools Overview
+
+### ClearML (HW5)
+- **Purpose**: Enterprise MLOps platform for experiment tracking and pipeline orchestration
+- **Features**: Real-time monitoring, model management, automated pipelines, production deployment
+- **Usage**: Web interface at https://app.clear.ml, programmatic API for automation
 
 ### Snakemake (HW4)
 - **Purpose**: Workflow orchestration and pipeline management
@@ -172,27 +229,38 @@ HW4 Pipeline Performance (Latest Run):
 ```
 ├── LICENSE
 ├── README.md              <- This file
-├── HW4_REPORT.md          <- HW4 implementation documentation
-├── VERSIONING_REPORT.md   <- HW2 implementation documentation
+├── reports/
+│   ├── ClearML_MLOps_Report.md  <- HW5 implementation documentation
+│   ├── HW4_REPORT.md            <- HW4 implementation documentation
+│   └── VERSIONING_REPORT.md     <- HW2 implementation documentation
 ├── REPRODUCTION.md        <- Setup and usage instructions
 ├── data/                  <- Data directory structure
 │   ├── raw/              <- Original data
 │   ├── processed/        <- Cleaned and processed data
 │   └── remote/           <- DVC remote storage
 ├── models/               <- Trained models and artifacts
-│   └── mlruns/           <- MLflow experiment data
-├── reports/              <- Generated reports and metrics
-├── config/               <- HW4 Hydra configuration
-│   ├── hydra/           <- Hierarchical config structure
+│   ├── mlruns/           <- MLflow experiment data
+│   └── clearml_artifacts/ <- ClearML artifacts storage
+├── config/               <- Configuration files
+│   ├── clearml/          <- HW5 ClearML configuration
+│   │   └── config.yaml
+│   ├── hydra/           <- HW4 Hydra configuration
 │   └── composed/         <- Generated composed configs
 ├── rules/                <- HW4 Snakemake rule definitions
-├── scripts/              <- HW4 Python execution scripts
+├── scripts/              <- Python execution scripts
+│   ├── setup_clearml.py  <- HW5 ClearML initialization
+│   └── [other scripts]   <- HW4 pipeline scripts
 ├── src/                  <- Source code
 │   ├── data/            <- Data processing scripts
 │   ├── models/          <- Model training scripts
+│   │   ├── train_model_clearml.py    <- HW5 ClearML training
+│   │   ├── compare_experiments.py    <- HW5 experiment comparison
+│   │   ├── clearml_pipeline.py       <- HW5 pipeline orchestration
+│   │   └── pipeline_monitor.py       <- HW5 monitoring system
 │   └── visualization/   <- Visualization scripts
 ├── Snakefile             <- HW4 main workflow definition
 ├── dvc.yaml             <- HW2 pipeline definition
+├── .clearml.conf        <- HW5 ClearML client configuration
 ├── pyproject.toml       <- Poetry configuration
 ├── requirements.txt     <- Python dependencies
 ├── Dockerfile           <- Container definition
@@ -243,11 +311,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Branch Information
 
-- **hw_4**: Latest HW4 implementation with Snakemake + Hydra automated pipelines
+- **hw_5**: Latest HW5 implementation with ClearML MLOps integration (Most Advanced)
+- **hw_4**: HW4 implementation with Snakemake + Hydra automated pipelines
 - **hw_2**: HW2 implementation with DVC + MLflow data/model versioning
 - **main**: Project root with basic structure
 
-For the most advanced features, use the `hw_4` branch.
+For the most advanced MLOps features, use the `hw_5` branch.
 
 ---
 
