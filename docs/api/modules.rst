@@ -3,78 +3,77 @@ API Reference
 
 This section contains the complete API reference for the Iris Data Science Project.
 
-Core Modules
-------------
+.. note::
+   This documentation is automatically generated. For the most up-to-date information, 
+   please refer to the source code directly.
 
-.. autosummary::
-   :toctree: _autosummary
+Project Structure
+-----------------
 
-   src
-   src.data
-   src.models
-   src.visualization
+The project is organized into several main modules:
+
+* **src/data** - Data processing and preprocessing modules
+* **src/models** - Machine learning models and training scripts  
+* **src/visualization** - Visualization and plotting utilities
+* **config** - Configuration files for different components
 
 Data Processing
 ---------------
 
-.. automodule:: src.data.make_dataset
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Data processing modules handle loading, cleaning, and preprocessing of the Iris dataset.
 
-.. automodule:: src.data
-   :members:
-   :undoc-members:
-   :show-inheritance:
+* **make_dataset.py** - Main data loading and preprocessing functionality
+* **Data utilities** - Helper functions for data manipulation
 
 Model Training and Evaluation
------------------------------
+------------------------------
 
-.. automodule:: src.models.train_model
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Machine learning models and training pipelines:
 
-.. automodule:: src.models.predict_model
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: src.models.compare_experiments
-   :members:
-   :undoc-members:
-   :show-inheritance:
+* **train_model.py** - Model training utilities
+* **predict_model.py** - Prediction and inference functions
+* **compare_experiments.py** - Experiment comparison and analysis
 
 Experiment Tracking
 -------------------
 
-.. automodule:: src.models.mlflow_utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
+MLOps and experiment tracking modules:
 
-.. automodule:: src.models.clearml_pipeline
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: src.models.pipeline_monitor
-   :members:
-   :undoc-members:
-   :show-inheritance:
+* **mlflow_utils.py** - MLflow integration utilities
+* **clearml_pipeline.py** - ClearML pipeline management
+* **pipeline_monitor.py** - Pipeline monitoring and health checks
 
 Visualization
 -------------
 
-.. automodule:: src.visualization.visualize
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Data visualization and plotting utilities:
+
+* **visualize.py** - Plotting and visualization functions
+* **Charts and graphs** - Performance visualization tools
 
 Main Entry Point
 ----------------
 
-.. automodule:: src.run
-   :members:
-   :undoc-members:
-   :show-inheritance:
+* **src/run.py** - Main application entry point
+
+Configuration
+-------------
+
+Configuration files are organized in the ``config/`` directory:
+
+* **config.yaml** - Main configuration file
+* **config/hydra/** - Hydra configuration files
+* **config/clearml/** - ClearML-specific configurations
+
+Usage Examples
+--------------
+
+For detailed usage examples and tutorials, please refer to:
+
+* :doc:`../usage` - General usage guide
+* :doc:`../quickstart` - Quick start tutorial
+* :doc:`../experiments` - Running experiments guide
+
+.. note::
+   For detailed API documentation of specific functions and classes,
+   please refer to the inline documentation in the source code.
