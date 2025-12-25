@@ -67,7 +67,8 @@ Contents
    :maxdepth: 2
    :caption: API Reference
 
-   api/modules
+   # API documentation temporarily disabled due to import issues
+   # api/modules
 
 .. toctree::
    :maxdepth: 2
