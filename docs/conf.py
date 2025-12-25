@@ -32,17 +32,14 @@ needs_sphinx = "4.0"
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-# MINIMAL EXTENSIONS - no autodoc or autosummary to avoid import errors
+# ABSOLUTE MINIMUM EXTENSIONS - no autodoc, no autosummary to avoid import errors
 extensions = [
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.todo",
-    "sphinx.ext.githubpages",
     "myst_parser",
-    "sphinx_copybutton",
 ]
 
-# Disable autosummary generation to avoid import errors
+# Completely disable any automatic generation
 autosummary_generate = False
+autodoc_default_options = {}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = []
@@ -93,7 +90,7 @@ exclude_patterns = ["_build"]
 # add_module_names = True
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
-# output. They are ignored by default.
+# output. They are resulting text. They are ignored by default.
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
