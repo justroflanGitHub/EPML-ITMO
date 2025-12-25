@@ -68,9 +68,6 @@ Contents
    :caption: API Reference
 
    api/modules
-   api/data
-   api/models
-   api/visualization
 
 .. toctree::
    :maxdepth: 2
@@ -85,7 +82,6 @@ Contents
    :maxdepth: 2
    :caption: Development
 
-   development/contributing
    development/deployment
    development/reproducibility
 
