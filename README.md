@@ -5,7 +5,15 @@ Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern
 
 ## Features
 
-### HW5: ClearML MLOps Integration (Latest)
+### HW6: Complete Documentation and Reporting System (Latest)
+- **Technical Documentation**: Sphinx-based documentation with MyST parser for comprehensive project docs
+- **GitHub Pages Deployment**: Automated CI/CD pipeline for documentation publishing
+- **Experiment Reports**: Comprehensive analysis of 18+ ML algorithms with visualizations and comparisons
+- **Automated Report Generation**: Visual report generation system with charts and performance metrics
+- **Reproducibility**: Complete setup instructions, Docker support, and environment validation
+- **MLOps Integration**: Combined ClearML, MLflow, DVC, Hydra, and Snakemake workflows
+
+### HW5: ClearML MLOps Integration
 - **Experiment Tracking**: ClearML for comprehensive experiment logging, parameter tracking, and artifact management
 - **Model Management**: Automatic model versioning, registration, and deployment with metadata tracking
 - **Pipeline Orchestration**: ClearML pipelines for end-to-end ML workflow automation with dependency management
@@ -37,7 +45,34 @@ Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern
 - Git
 - ClearML account (optional, for hosted service)
 
-### HW5: ClearML MLOps Integration (Most Advanced)
+### HW6: Complete Documentation and Reporting System (Most Advanced)
+
+1. Clone the repository and checkout HW6 branch:
+```bash
+git clone https://github.com/justroflanGitHub/EPML-ITMO.git
+cd iris-data-science-project
+git checkout hw_6
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Build documentation:
+```bash
+cd docs
+python -m sphinx -b html . _build/html
+# Documentation available at docs/_build/html/index.html
+```
+
+4. Generate automated reports:
+```bash
+python scripts/generate_visual_reports.py
+# View reports in reports/ directory
+```
+
+### HW5: ClearML MLOps Integration
 
 1. Clone the repository and checkout HW5 branch:
 ```bash
@@ -116,6 +151,40 @@ pip install -r requirements.txt
 dvc repro
 ```
 
+## HW6 Documentation and Reporting
+
+### Documentation System
+```bash
+# Build Sphinx documentation
+cd docs
+python -m sphinx -b html . _build/html
+
+# View documentation
+open docs/_build/html/index.html
+```
+
+### Automated Report Generation
+```bash
+# Generate comprehensive reports with visualizations
+python scripts/generate_visual_reports.py
+
+# View generated reports
+ls reports/
+# - experiments_comprehensive_report.md
+# - auto_report_summary.json
+# - automated_report.md
+# - figures/feature_importance.png
+```
+
+### Experiment Analysis
+```bash
+# Run comprehensive experiment comparison
+python src/models/run_experiments.py
+
+# View MLflow experiments
+mlflow ui --backend-store-uri models/mlruns
+```
+
 ## HW4 Pipeline Usage
 
 ### Pipeline Execution Options
@@ -180,7 +249,15 @@ HW4 Pipeline Performance (Latest Run):
 
 **Best Model**: SVM with 96.7% accuracy
 
+HW6 Documentation System includes comprehensive analysis of 18+ ML algorithms with detailed performance comparisons, visualizations, and automated report generation.
+
 ## Documentation
+
+### HW6 Documentation
+- [HW6 Documentation System](docs/_build/html/index.html) - Complete Sphinx documentation
+- [Comprehensive Experiment Reports](reports/experiments_comprehensive_report.md) - Analysis of 18+ ML algorithms
+- [Automated Report Generation](scripts/generate_visual_reports.py) - Visual report system
+- [Reproduction Guide](REPRODUCTION.md) - Complete setup and usage instructions
 
 ### HW5 Documentation
 - [ClearML MLOps Implementation Report](reports/ClearML_MLOps_Report.md) - Complete ClearML integration documentation
@@ -198,6 +275,11 @@ HW4 Pipeline Performance (Latest Run):
 - [Reproduction Instructions](REPRODUCTION.md) - Step-by-step guide for setup and usage
 
 ## Tools Overview
+
+### HW6 Documentation Tools
+- **Sphinx**: Documentation generation with MyST parser for Markdown support
+- **GitHub Actions**: Automated documentation deployment to GitHub Pages
+- **Automated Reporting**: Custom scripts for visual report generation with matplotlib/seaborn
 
 ### ClearML (HW5)
 - **Purpose**: Enterprise MLOps platform for experiment tracking and pipeline orchestration
@@ -230,10 +312,18 @@ HW4 Pipeline Performance (Latest Run):
 ├── LICENSE
 ├── README.md              <- This file
 ├── reports/
-│   ├── ClearML_MLOps_Report.md  <- HW5 implementation documentation
-│   ├── HW4_REPORT.md            <- HW4 implementation documentation
-│   └── VERSIONING_REPORT.md     <- HW2 implementation documentation
+│   ├── experiments_comprehensive_report.md  <- HW6 comprehensive analysis
+│   ├── auto_report_summary.json             <- HW6 automated summary
+│   ├── automated_report.md                  <- HW6 generated report
+│   ├── figures/                             <- HW6 visualization charts
+│   ├── ClearML_MLOps_Report.md              <- HW5 implementation documentation
+│   ├── HW4_REPORT.md                        <- HW4 implementation documentation
+│   └── VERSIONING_REPORT.md                 <- HW2 implementation documentation
 ├── REPRODUCTION.md        <- Setup and usage instructions
+├── docs/                  <- HW6 Sphinx documentation
+│   ├── _build/html/      <- Generated documentation
+│   ├── conf.py           <- Sphinx configuration
+│   └── [other rst/md files]
 ├── data/                  <- Data directory structure
 │   ├── raw/              <- Original data
 │   ├── processed/        <- Cleaned and processed data
@@ -248,15 +338,17 @@ HW4 Pipeline Performance (Latest Run):
 │   └── composed/         <- Generated composed configs
 ├── rules/                <- HW4 Snakemake rule definitions
 ├── scripts/              <- Python execution scripts
-│   ├── setup_clearml.py  <- HW5 ClearML initialization
-│   └── [other scripts]   <- HW4 pipeline scripts
+│   ├── generate_visual_reports.py           <- HW6 report generation
+│   ├── setup_clearml.py                     <- HW5 ClearML initialization
+│   └── [other scripts]                      <- HW4 pipeline scripts
 ├── src/                  <- Source code
 │   ├── data/            <- Data processing scripts
 │   ├── models/          <- Model training scripts
-│   │   ├── train_model_clearml.py    <- HW5 ClearML training
-│   │   ├── compare_experiments.py    <- HW5 experiment comparison
-│   │   ├── clearml_pipeline.py       <- HW5 pipeline orchestration
-│   │   └── pipeline_monitor.py       <- HW5 monitoring system
+│   │   ├── train_model_clearml.py           <- HW5 ClearML training
+│   │   ├── compare_experiments.py           <- HW5 experiment comparison
+│   │   ├── clearml_pipeline.py              <- HW5 pipeline orchestration
+│   │   ├── pipeline_monitor.py              <- HW5 monitoring system
+│   │   ├── run_experiments.py               <- HW6 comprehensive experiments
 │   └── visualization/   <- Visualization scripts
 ├── Snakefile             <- HW4 main workflow definition
 ├── dvc.yaml             <- HW2 pipeline definition
@@ -271,6 +363,9 @@ HW4 Pipeline Performance (Latest Run):
 
 ### Running Tests
 ```bash
+# HW6 documentation tests
+cd docs && python -m sphinx -b html . _build/html
+
 # HW4 pipeline tests
 python -m snakemake --cores 1  # Will validate all dependencies
 
@@ -296,6 +391,9 @@ The project uses pre-commit hooks for code quality:
 # Build container
 docker build -t iris-project .
 
+# Run HW6 documentation
+docker run -it iris-project bash -c "cd docs && python -m sphinx -b html . _build/html"
+
 # Run HW4 pipeline in container
 docker run -it iris-project python -m snakemake --cores 4
 
@@ -311,12 +409,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Branch Information
 
-- **hw_5**: Latest HW5 implementation with ClearML MLOps integration (Most Advanced)
+- **hw_6**: Latest HW6 implementation with complete documentation and reporting system (Most Advanced)
+- **hw_5**: HW5 implementation with ClearML MLOps integration
 - **hw_4**: HW4 implementation with Snakemake + Hydra automated pipelines
 - **hw_2**: HW2 implementation with DVC + MLflow data/model versioning
 - **main**: Project root with basic structure
 
-For the most advanced MLOps features, use the `hw_5` branch.
+For the most complete MLOps and documentation features, use the `hw_6` branch.
 
 ---
 
