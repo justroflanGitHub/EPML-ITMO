@@ -16,37 +16,38 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src'))
+
+sys.path.insert(0, os.path.abspath("../src"))
 
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '4.0'
+needs_sphinx = "4.0"
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
-    'myst_parser',
-    'sphinx_autodoc_typehints',
-    'sphinx_copybutton',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    "sphinx.ext.coverage",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.ifconfig",
+    "sphinx.ext.githubpages",
+    "myst_parser",
+    "sphinx_autodoc_typehints",
+    "sphinx_copybutton",
 ]
 
 # Autodoc settings
 autodoc_default_options = {
-    'members': True,
-    'undoc-members': True,
-    'show-inheritance': True,
-    'member-order': 'bysource',
+    "members": True,
+    "undoc-members": True,
+    "show-inheritance": True,
+    "member-order": "bysource",
 }
 
 # Napoleon settings
@@ -57,12 +58,12 @@ napoleon_include_private_with_doc = False
 
 # Intersphinx mapping
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3', None),
-    'numpy': ('https://numpy.org/doc/stable/', None),
-    'pandas': ('https://pandas.pydata.org/docs/', None),
-    'sklearn': ('https://scikit-learn.org/stable/', None),
-    'matplotlib': ('https://matplotlib.org/stable/', None),
-    'seaborn': ('https://seaborn.pydata.org/', None),
+    "python": ("https://docs.python.org/3", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "pandas": ("https://pandas.pydata.org/docs/", None),
+    "sklearn": ("https://scikit-learn.org/stable/", None),
+    "matplotlib": ("https://matplotlib.org/stable/", None),
+    "seaborn": ("https://seaborn.pydata.org/", None),
 }
 
 # MyST Parser settings
