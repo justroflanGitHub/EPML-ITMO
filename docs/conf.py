@@ -17,7 +17,10 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../src"))
+# Add current directory and parent directory to path for documentation
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+sys.path.insert(0, os.path.dirname(current_dir))
 
 # -- General configuration -----------------------------------------------------
 
@@ -28,7 +31,6 @@ needs_sphinx = "4.0"
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.autosummary",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx.ext.intersphinx",
@@ -42,7 +44,7 @@ extensions = [
     "sphinx_copybutton",
 ]
 
-# Autodoc settings
+# Autodoc settings - disable autosummary to avoid import errors
 autodoc_default_options = {
     "members": True,
     "undoc-members": True,
@@ -86,7 +88,7 @@ myst_enable_extensions = [
 templates_path = ["_templates"]
 
 # The suffix of source filenames.
-source_suffix = ".rst"
+source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
@@ -173,8 +175,8 @@ html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+# so a file named "default.css" will overwrite the builtin default.css.
+html_static_path = []  # Remove _static to avoid warnings
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -214,7 +216,10 @@ html_static_path = ["_static"]
 # base URL from which the finished HTML is served.
 # html_use_opensearch = ''
 
-# This is the file name suffix for HTML files (e.g. ".xhtml").
+# This is the file name suffix for HTML files (e.g. ".xhtml").  The default file
+# suffix is html.  To support different formats, either define the suffix for
+# a format name here, or register a new suffix in the same way as the source_suffix
+# above.
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
@@ -230,26 +235,23 @@ latex_elements = {
     # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
     # 'preamble': '',
+    # Latex figure (float) alignment
+    # 'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-    (
-        "index",
-        "iris-data-science-project.tex",
-        "Iris Data Science Project Documentation",
-        "Mikhail",
-        "manual",
-    ),
+    (master_doc, "iris-data-science-project.tex", "Iris Data Science Project Documentation",
+     "Mikhail", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 # latex_logo = None
 
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
+# For "manual" documents, if this is true, then toplevel headings are parts, not
+# chapters.
 # latex_use_parts = False
 
 # If true, show page references after internal links.
@@ -270,13 +272,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (
-        "index",
-        "iris-data-science-project",
-        "Iris Data Science Project Documentation",
-        ["Mikhail"],
-        1,
-    )
+    (master_doc, "iris-data-science-project", "Iris Data Science Project Documentation",
+     [author], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -289,15 +286,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (
-        "index",
-        "iris-data-science-project",
-        "Iris Data Science Project Documentation",
-        "Mikhail",
-        "Iris Data Science Project",
-        "Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern Engineering Practices",
-        "Miscellaneous",
-    ),
+    (master_doc, "iris-data-science-project", "Iris Data Science Project Documentation",
+     author, "iris-data-science-project", "Comprehensive Data Science Workspace for Analyzing the Iris Dataset Using Modern Engineering Practices",
+     "Miscellaneous"),
 ]
 
 # Documents to append as an appendix to all manuals.
