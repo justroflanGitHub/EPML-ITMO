@@ -60,16 +60,25 @@ jobs:
           poetry lock --no-update
           echo "Lock file synchronized at $(date)"
 
-      - name: Install all dependencies
+      - name: Force regenerate and install dependencies
         run: |
-          echo "Installing all dependencies and project..."
+          echo "Starting fresh dependency installation..."
+          echo "Removing any existing venv to start clean..."
+          rm -rf .venv
+          echo "Regenerating poetry.lock from scratch..."
+          poetry lock --no-update
+          echo "Installing all dependencies including project..."
           poetry install --no-interaction
-          echo "All dependencies installed successfully at $(date)"
+          echo "Dependencies installation completed at $(date)"
+          echo "Verifying installation..."
+          poetry show
 
       - name: Build documentation
         run: |
+          echo "Building Sphinx documentation..."
           cd docs
           poetry run sphinx-build -b html . _build/html
+          echo "Documentation built successfully"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
