@@ -49,18 +49,20 @@ jobs:
           # Install the project in development mode to make src modules available
           python -m pip install -e .
 
-      - name: Clean Sphinx cache
+      - name: Clean Sphinx cache completely
         run: |
-          echo "Cleaning Sphinx cache..."
+          echo "Cleaning ALL Sphinx cache..."
           cd docs
           rm -rf _build
           rm -rf .doctrees
+          rm -rf .buildinfo
+          echo "Cache cleaned"
 
-      - name: Build documentation
+      - name: Build documentation with fresh environment
         run: |
-          echo "Building Sphinx documentation..."
+          echo "Building Sphinx documentation with fresh environment..."
           cd docs
-          python -m sphinx -b html . _build/html
+          python -m sphinx -b html --fresh-env . _build/html
           echo "Documentation built successfully"
 
       - name: Upload artifact
