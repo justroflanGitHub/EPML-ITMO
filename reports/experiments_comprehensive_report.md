@@ -243,7 +243,7 @@ The comprehensive analysis of 18 machine learning algorithms on the Iris dataset
 
 ---
 
-**Report Generated**: December 25, 2025  
-**Total Experiments**: 18  
-**Best Model**: SVM_Linear / LogisticRegression_L2 (100% accuracy)  
+**Report Generated**: December 25, 2025
+**Total Experiments**: 18
+**Best Model**: SVM_Linear / LogisticRegression_L2 (100% accuracy)
 **Analysis Tools**: MLflow, ClearML, Pandas, Scikit-learn

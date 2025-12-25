@@ -164,7 +164,7 @@ services:
       - ENVIRONMENT=production
     ports:
       - "8000:8000"
-    
+
   mlflow:
     image: python:3.13-slim
     command: mlflow ui --backend-store-uri sqlite:///mlruns/mlflow.db --host 0.0.0.0 --port 5000
@@ -491,6 +491,6 @@ mlflow --version
 
 ---
 
-**Last Updated**: December 25, 2025  
-**Version**: 1.0.0  
+**Last Updated**: December 25, 2025
+**Version**: 1.0.0
 **Maintained by**: Mikhail

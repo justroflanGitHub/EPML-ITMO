@@ -443,6 +443,6 @@ This project maintains full reproducibility through:
 
 ---
 
-**Last Updated**: December 25, 2025  
-**Version**: 2.0.0  
+**Last Updated**: December 25, 2025
+**Version**: 2.0.0
 **Maintained by**: Mikhail
